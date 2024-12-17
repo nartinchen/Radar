@@ -1,0 +1,878 @@
+/* Body */
+body {
+    margin: 0;
+    font-family: "kantumruy pro", sans-serif;
+    line-height: 1.6;
+    background-color: #141c3d;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #141c3d;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  /* logo */
+
+  .header-logo {
+    width: 125px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+
+  /* Ikoner */
+  .ikon {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 25px;
+    right: 125px;
+  }
+
+  .ikoner {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    justify-self: end;
+  }
+
+  /* off screen menu */
+  .off-screen-menu {
+    background-color: #1a254d;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+  }
+
+  .off-screen-menu ul {
+    list-style-type: none;
+  }
+
+  .off-screen-menu a {
+    color: #f0f0f0;
+    text-decoration: none;
+  }
+
+  .off-screen-menu a:hover {
+    color: #4C9F89;
+    text-decoration: none;
+  }
+
+  .off-screen-menu.active {
+    right: 0;
+  }
+
+  .nav {
+    padding: 1rem;
+    display: flex;
+    background-color: #141c3d;
+  }
+
+  /* burger menu */
+  .burger-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .burger-menu span {
+    height: 5px;
+    width: 80%;
+    background-color: #4C9F89;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: .3s ease;
+  }
+
+  .burger-menu span:nth-child(1) {
+    top: 25%;
+  }
+
+  .burger-menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .burger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0%;
+  }
+
+  .burger-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+  }
+  
+  /* slideshow sektion */
+  .slider-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    background-color: #22545d;
+    align-items: stretch;
+  }
+
+  /* slideshow billede */
+  .card img{
+    width: auto;
+    height: 70;
+  }
+  
+  /* Slideshow tekst */
+  .card-tekst {
+    padding-right: 215px;
+    padding-left: 40px;
+  }
+
+  .card-tekst h1 {
+    font-family: "big shoulders text";
+    color:#4C9F89;
+    font-size: 70px;
+    line-height: normal;
+    margin-bottom: auto;
+  }
+
+  .card-tekst h2 {
+    font-family: "big shoulders text";
+  }
+
+  .card-tekst h3 {
+    font-family: "kantumruy pro";
+    font-weight: normal;
+    color: #4C9F89;
+  }
+
+  /* Extra slideshow */
+  .extra-slideshow .slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .extra-slideshow .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .extra-slideshow .email-felt {
+    margin-top: 130px;
+  }
+
+  .extra-slideshow .slider-knapper {
+    background-color: #22545d;
+    border: none;
+    font-size: 15px;
+  }
+
+  .extra-slideshow .card-tekst {
+    margin-left: 40px;
+  }
+
+  /* knapper */
+  .koeb-billet-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #141c3d;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+  }
+  
+  .koeb-billet-knap:hover {
+    background-color: #212b55;
+  }
+  
+  .laes-mere-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #f7f7f7;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+  }
+
+  .laes-mere-knap:hover {
+    background-color: #c5c4c4;
+  }
+
+  .se-events-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #141c3d;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-top: 117px;
+  }
+  
+  .se-events-knap:hover {
+    background-color: #212b55;
+  }
+
+  /* Events Section */
+  .events-tekst h1 {
+    padding-left: 13rem;
+    color: #4c9f89;
+    font-family: "big shoulders text";
+    font-size: 3.6em;
+    margin-bottom: 0em;
+  }
+
+  .events-tekst p {
+    padding-left: 13rem;
+    margin-bottom: 4rem;
+    color: #d9d9d9;
+    font-size: 1.75em;
+  }
+
+  .event-card-tekst {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    padding: 25px;
+    padding-left: 4rem;
+  }
+  
+  .events h2 {
+    margin-bottom: 0em;
+    font-size: 2rem;
+    margin-top: 0em;
+    color: #d9d9d9;
+    font-family: "big shoulders text";
+  }
+  
+  .event-grid {
+    display: grid;
+    gap: 2rem;
+    padding-left: 13rem;
+  }
+  
+  .event1 {
+    background-color: #4c9f89;
+    max-width: 85%;
+    height: 200px;
+    display: flex;
+  }
+
+  .event2 {
+    background-color: #f24c30;
+    max-width: 85%;
+    height: 200px;
+    display: flex;
+  }
+
+  .event3 {
+    background-color: #e93169;
+    max-width: 85%;
+    height: 200px;
+    display: flex;
+  }
+
+  .event4 {
+    background-color: #1a4fdc;
+    max-width: 85%;
+    height: 200px;
+    display: flex;
+  }
+  
+  .event-grid img {
+    width: 700px;
+  }
+  
+  .event p {
+    margin-top: 1.5rem;
+    flex: 1;
+    font-family: "kantumruy pro";
+    color: #141c3d;
+  }
+
+  .event-knapper {
+    margin-top: 25px;
+  }
+  
+  /* Fællesskab side */
+  .faellesskab-grid {
+    display: grid;
+    margin-left: 150px;
+  }
+  /* fællesskab overskrifter */
+  .faellesskab-sektion h1 {
+    font-family: "big shoulders text";
+    margin-left: 150px;
+  }
+  .faellesskab-sektion h2 {
+    font-family: "big shoulders text";
+    margin-left: 150px;
+  }
+  
+  .blog-overskrift h1 {
+    color: #f24c30;
+    font-size: 70px;
+    line-height: 10px;
+  }
+
+  .blog-overskrift h2 {
+    color: #d9d9d9;
+    font-size: 35px;
+  }
+
+  .tidligere-events-overskrift h1 {
+    color: #e93169;
+    font-size: 70px;
+    line-height: 10px;
+  }
+
+  .tidligere-events-overskrift h2 {
+    color: #d9d9d9;
+    font-size: 35px;
+  }
+
+  .bliv-frivillig-overskrift h1 {
+    color: #1a4fdc;
+    font-size: 70px;
+    line-height: 10px;
+  }
+
+  .bliv-frivillig-overskrift h2 {
+    color: #d9d9d9;
+    font-size: 35px;
+  }
+
+  /* Fællesskab tekst */
+  .faellesskab-tekst {
+    color: #d9d9d9;
+    font-size: 25px;
+    margin-right: 150px;
+    margin-left: 780px;
+  }
+
+  /* Fællesskab billeder */
+  .faellesskab-grid img {
+    width: 700px;
+    float: left;
+    margin-bottom: 90px;
+  }
+
+  /* Fællesskab knapper */
+  .blog-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #f24c30;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    font-size: 17px;
+  }
+  
+  .blog-knap:hover {
+    background-color: #a23522;
+  }
+
+  .tidligere-events-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #e93169;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    font-size: 17px;
+  }
+  
+  .tidligere-events-knap:hover {
+    background-color: #a22349;
+  }
+
+  .bliv-frivillig-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #1a4fdc;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    font-size: 17px;
+  }
+  
+  .bliv-frivillig-knap:hover {
+    background-color: #0e3396;
+  }
+
+  .laes-mere {
+    padding: 0.8rem 1.5rem;
+    background-color: #d9d9d9;
+    color: #1a254d;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    font-size: 17px;
+  }
+  
+  .laes-mere:hover {
+    background-color: #8e8e8e;
+  }
+
+  /* Podcast sektion */
+  .podcast-sektion {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
+  .podcast-tekst h1{
+    color: #ffffff;
+    font-family: "big shoulders text";
+    font-size: 70px;
+    line-height: 10px;
+  }
+
+  .podcast-tekst h2 {
+    color: #4c9f89;
+    font-family: "big shoulders text";
+    font-size: 35px;
+  }
+
+  .podcast-tekst p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  .podcast-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .podcast-embed iframe {
+    max-width: 700px;
+    margin-bottom: 50px;
+  }
+
+  /* Information sektion */
+  .information-sektion {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
+  .information-tekst h1 {
+    color:#4c9f89 ;
+    font-family: "big shoulders text";
+    font-size: 68px;
+  }
+
+  .information-tekst p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  .information-knapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  .om-radar-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #4C9F89;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .om-radar-knap:hover {
+    background-color: #2c5e51;
+  }
+
+  .sociale-medier-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #f24c30;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .sociale-medier-knap:hover {
+    background-color: #a23522;
+  }
+
+  .faq-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #e93169;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .faq-knap:hover {
+    background-color: #a62048;
+  }
+
+  .kontakt-os-knap {
+    padding: 0.8rem 1.5rem;
+    background-color: #1a4fdc;
+    color: #d9d9d9;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .kontakt-os-knap:hover {
+    background-color: #143cad;
+  }
+
+  /* footer */
+  .footer {
+    padding: 1rem;
+    background-color: #141c3d;
+    color: #d9d9d9;
+    font-size: 0.9rem;
+    display: grid;
+    gap: 3rem;
+    line-height: 3;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "radar" "kontakt" "folg os" "nyhedsbrev";
+    font-weight: lighter;
+    margin-top: 90px;
+  }
+
+  /* footer sektioner */
+  .footer-sektion {
+    margin-left: 5%;
+  }
+
+  /* Footer logo */
+  .footer-logo {
+    width: 125px;
+    margin-top: 5px;
+  }
+
+  /* Footer overskrifter */
+  .footer-overskrift {
+    font-size: x-large;
+    font-weight: lighter;
+    margin-top: 20px;
+    font-family: "kantumruy pro", sans-serif;
+    font-weight: lighter;
+  }
+
+  /* følg os sektion */
+  .folg-os-overskrift {
+    font-size: x-large;
+    font-weight: lighter;
+    margin-top: 20px;
+    font-family: "kantumruy pro", sans-serif;
+    display: block;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: #d9d9d9;
+    display: block;
+
+  }
+
+  /* Nyhedsbrev*/
+  .email-felt {
+    padding: 0.75rem;
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 15px;
+    font-family: "kantumruy pro", sans-serif;
+    background-color: #3c466e;
+  }
+
+  .email-knap {
+    border: none;
+    border-radius: 10px;
+    height: 13%;
+    width: 20%;
+    font-size: 15px;
+    color: #d9d9d9;
+    background-color: #4C9F89;
+    font-family: "kantumruy pro", sans-serif;
+  }
+
+  /* sociale medier logoer */
+  .sociale-medier-logo {
+    width: auto;
+    height: 50px;
+    padding: 5%;
+    margin-right: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+
+/* media query for mobil */
+@media (max-width: 692px) {
+  /* logo centreres */
+  .header-logo {
+    padding-left: 30%;
+  }
+
+  /* slideshow */
+  .slider-container {
+    height: auto;
+  }
+
+  .card {
+    flex-direction: column;
+    padding-bottom: 20px;
+    height: auto;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card-tekst {
+    padding: 0 0 15px 50px; 
+  }
+
+  .card-tekst h1 {
+    font-size: 50px;
+  }
+
+  .linebreak {
+    display: none;
+  }
+
+  /* extra slideshow */
+  .extra-slideshow .slider-container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .extra-slideshow .card-email {
+    margin-left: 90px;
+  }
+
+  .extra-slideshow .email-felt {
+    margin-top: 10px;
+  }
+
+  .extra-slideshow h2 {
+    margin-bottom: auto;
+  }
+
+  .se-events-knap {
+    width: 10%;
+    margin-left: 90px;  
+  }
+
+  /* events */
+  .events-tekst h1{
+    padding-left: 0.7em;
+  }
+
+  .events-tekst p {
+    padding-left: 1.6em;
+    margin-right: 20px;
+    font-size: 26px;
+  }
+
+  .event-grid {
+    padding-left: 0;
+    gap: 10px;
+  }
+
+  .event-grid img {
+    width: 692px;
+  }
+
+  .event1 {
+    flex-direction: column;
+    padding-bottom: 200px;
+    width: 692px;
+  }
+
+  .event2 {
+    flex-direction: column;
+    padding-bottom: 200px;
+    width: 692px;
+  }
+
+  .event3 {
+    flex-direction: column;
+    padding-bottom: 200px;
+    width: 692px;
+  }
+
+  .event4 {
+    flex-direction: column;
+    padding-bottom: 150px;
+    width: 813px;
+  }
+
+  .event-knapper {
+    position: absolute;
+    padding-left: 300px;
+    padding-top: 35px;
+  }
+
+  /* fællesskab side */
+  .faellesskab-grid {
+    margin-left: 0;
+  }
+ 
+  .faellesskab-sektion h2 {
+    display: none;
+  }
+
+  .faellesskab-grid img{
+    float: none;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .faellesskab-tekst {
+    margin-left: 75px;
+    margin-right: 75px;
+    font-size: 20px;
+  }
+
+  .faellesskab-knapper {
+    margin-bottom: 90px;
+  }
+
+  /* Podcast sektion */
+  .podcast-sektion {
+    margin-left: 45px;
+    margin-right: 20px;
+  }
+
+  /* Information sektion */
+  .information-sektion{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .information-tekst h1 {
+    text-align: center;
+  }
+
+  .information-knapper {
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem;
+    background-color: #141c3d;
+    color: #d9d9d9;
+    font-size: 0.78rem;
+    display: grid;
+    gap: 30px;
+    line-height: 3;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "radar" "kontakt" "nyhedsbrev";
+  }
+
+  /* footer sektioner */
+  .footer-sektion {
+    margin-left: 5%;
+  }
+
+  /* Footer logo */
+  .footer-logo {
+    width: 75px;
+    margin-top: 5px;
+  }
+
+  /* Footer overskrifter */
+  .footer-overskrift {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  /* skjul følg os footer sektion */
+  .folg-os-overskrift {
+    display: none;
+  }
+
+  .footer-links a {
+    display: none;
+  }
+
+  /* Nyhedsbrev*/
+  .email-felt {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    max-width: 50%;
+    margin-bottom: 15px;
+  }
+
+  .email-knap {
+    border: none;
+    border-radius: 10px;
+    height: 13%;
+    width: 30%;
+    font-size: 14px;
+  }
+
+  /* sociale medier logoer */
+  .sociale-medier-logo {
+    width: auto;
+    height: 25px;
+    padding: 5%;
+    margin-right: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+}
